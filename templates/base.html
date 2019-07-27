@@ -43,17 +43,18 @@ div.container {
 </style>
 <div class="container">
 
-TEST
+    {% block body %}
+    {% endblock %}
+
 </div>
 <div class="footer">
 <div class="btn-group">
-    <form action="/healthtips" method="get">
-        <input type="submit" value="Health Tips" 
-             name="Submit" id="frm1_submit" />
-    </form>
-  <button class="button">Health Tips</button>
-  <button class="button">My Account</button>
-  <button class="button">Friends</button>
+<form method = "POST">
+  <button name="home", class="button", type="submit">Home</button>
+  <button name="healthtips", class="button", type="submit">Health Tips</button>
+  <button name="account", class="button", type="submit">My Account</button>
+  <button name="friends", class="button", type="submit">Friends</button>
+</form>
 </div>
 </div>
 </html>

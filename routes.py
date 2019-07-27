@@ -15,6 +15,15 @@ def welcome():
     # print(id)
     # system.createOrder(id)
     # print(system)
-
+    if request.method == 'POST':
+        if "home" in request.form:
+            return redirect(url_for('home'))
+        elif "healthtips" in request.form:
+            return redirect(url_for('healthtips'))
+        elif "accounts" in request.form:
+            return redirect(url_for('accounts'))
+        elif "friends" in request.form:
+            return redirect(url_for('friends'))
 
     return render_template('welcome.html')
+
