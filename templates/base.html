@@ -7,7 +7,7 @@
   border: none;
   color: white;
   width:25%;
-  padding: 5% 32px;
+  padding: 5% 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -18,6 +18,31 @@
 
 .btn-group .button:hover {
   background-color: #3e8e41;
+}
+
+.btn-group2 .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  width:100%;
+  padding: 7% 20px;
+  text-align: center;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.btn-group2 .button:hover {
+  background-color: #3e8e41;
+}
+
+.aheader {
+   position: absolute;
+   top: 0;
+   width: 100%;
+   background-color: gray;
+   color: white;
+   text-align: center;
+    
 }
 
 .footer {
@@ -40,11 +65,36 @@ div.container {
     overflow-y: auto;
     min-height: 100%;
 }
+
+div.spacing {
+    margin: 10%;
+}
 </style>
 <div class="container">
-
-    {% block body %}
-    {% endblock %}
+<div class="aheader">
+<header>
+<h1>HH</h1>
+</header>
+</div>
+<br><br><br><br><br>
+{% block body %}
+<div class="btn-group2">
+<form method = "POST">
+<div class="spacing">
+  <button name="home", class="button", type="submit">Gym</button>
+</div>
+<div class="spacing">
+  <button name="healthtips", class="button", type="submit">Work / Study</button>
+</div>
+<div class="spacing">
+  <button name="accounts", class="button", type="submit">Diet</button>
+</div>
+<div class="spacing">
+  <button name="accounts", class="button", type="submit">Sleep</button>
+</div>
+</form>
+</div>
+{% endblock %}
 
 </div>
 <div class="footer">
@@ -52,7 +102,7 @@ div.container {
 <form method = "POST">
   <button name="home", class="button", type="submit">Home</button>
   <button name="healthtips", class="button", type="submit">Health Tips</button>
-  <button name="account", class="button", type="submit">My Account</button>
+  <button name="accounts", class="button", type="submit">My Account</button>
   <button name="friends", class="button", type="submit">Friends</button>
 </form>
 </div>

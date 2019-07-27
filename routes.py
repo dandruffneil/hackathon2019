@@ -27,3 +27,55 @@ def welcome():
 
     return render_template('welcome.html')
 
+
+@app.route('/home', methods=["GET","POST"])
+def home():
+    if request.method == 'POST':
+        if "home" in request.form:
+            return redirect(url_for('home'))
+        elif "healthtips" in request.form:
+            return redirect(url_for('healthtips'))
+        elif "accounts" in request.form:
+            return redirect(url_for('accounts'))
+        elif "friends" in request.form:
+            return redirect(url_for('friends'))
+    return render_template('base.html')
+
+@app.route('/healthtips', methods=["GET","POST"])
+def healthtips():
+    if request.method == 'POST':
+        if "home" in request.form:
+            return redirect(url_for('home'))
+        elif "healthtips" in request.form:
+            return redirect(url_for('healthtips'))
+        elif "accounts" in request.form:
+            return redirect(url_for('accounts'))
+        elif "friends" in request.form:
+            return redirect(url_for('friends'))
+    return render_template('healthtips.html')
+    
+@app.route('/accounts', methods=["GET","POST"])
+def accounts():
+    if request.method == 'POST':
+        if "home" in request.form:
+            return redirect(url_for('home'))
+        elif "healthtips" in request.form:
+            return redirect(url_for('healthtips'))
+        elif "accounts" in request.form:
+            return redirect(url_for('accounts'))
+        elif "friends" in request.form:
+            return redirect(url_for('friends'))
+    return render_template('accounts.html')
+
+@app.route('/friends', methods=["GET","POST"])
+def friends():
+    if request.method == 'POST':
+        if "home" in request.form:
+            return redirect(url_for('home'))
+        elif "healthtips" in request.form:
+            return redirect(url_for('healthtips'))
+        elif "accounts" in request.form:
+            return redirect(url_for('accounts'))
+        elif "friends" in request.form:
+            return redirect(url_for('friends'))
+    return render_template('friends.html')
