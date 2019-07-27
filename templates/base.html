@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color:black">
+<style>
+
+.btn-group .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  width:25%;
+  padding: 5% 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+}
+
+.btn-group .button:hover {
+  background-color: #3e8e41;
+}
+
+.footer {
+   position: absolute;
+   left:35%;
+   bottom: 0;
+   width: 30%;
+   height: 8%;
+   background-color: gray;
+   color: white;
+   text-align: center;
+}
+
+div.container {
+    width:30%;
+    margin: 0 auto;
+    background:white;
+    position:absolute;
+    left:35%;
+    overflow-y: auto;
+    min-height: 100%;
+}
+</style>
+<div class="container">
+
+TEST
+</div>
+<div class="footer">
+<div class="btn-group">
+    <form action="/healthtips" method="get">
+        <input type="submit" value="Health Tips" 
+             name="Submit" id="frm1_submit" />
+    </form>
+  <button class="button">Health Tips</button>
+  <button class="button">My Account</button>
+  <button class="button">Friends</button>
+</div>
+</div>
+</html>
