@@ -39,6 +39,17 @@ def home():
             return redirect(url_for('accounts'))
         elif "friends" in request.form:
             return redirect(url_for('friends'))
+
+    if request.method == 'POST':
+        if "gym" in request.form:
+            return redirect(url_for('gym'))
+        elif "studywork" in request.form:
+            return redirect(url_for('studywork'))
+        elif "diet" in request.form:
+            return redirect(url_for('diet'))
+        elif "sleep" in request.form:
+            return redirect(url_for('sleep'))
+
     return render_template('base.html')
 
 @app.route('/healthtips', methods=["GET","POST"])
@@ -79,3 +90,16 @@ def friends():
         elif "friends" in request.form:
             return redirect(url_for('friends'))
     return render_template('friends.html')
+
+@app.route('/home/gym', methods=["GET","POST"])
+def gym():
+    if request.method == 'POST':
+        if "home" in request.form:
+            return redirect(url_for('home'))
+        elif "healthtips" in request.form:
+            return redirect(url_for('healthtips'))
+        elif "accounts" in request.form:
+            return redirect(url_for('accounts'))
+        elif "friends" in request.form:
+            return redirect(url_for('friends'))
+    return render_template('gym.html')
