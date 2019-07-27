@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from workout import Workout
+from src.workout import Workout
 
 class Category():
 	def __init__(self):
